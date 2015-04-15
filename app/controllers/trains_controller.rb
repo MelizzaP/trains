@@ -11,4 +11,9 @@ class TrainsController < ApplicationController
 
   def destroy
   end
+  
+  def import
+    Train.import(params[:file])
+    redirect_to root_path, notice: 'File Added Successfully, Congrats bro'
+  end
 end
