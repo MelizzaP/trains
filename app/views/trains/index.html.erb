@@ -1,0 +1,14 @@
+<h1>Trains</h1>
+<% if @trains.length > 1 %>
+  <% @trains.each do |t| %>
+    <p> <%= t['run_number'] %> <p>
+  <% end %>
+<% else %>
+    <h4>There are currently no trains uploaded</h4>
+<% end %>
+
+<%= form_tag import_trains_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Upload csv file' %>
+<% end %>
+  
