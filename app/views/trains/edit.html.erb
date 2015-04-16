@@ -1,0 +1,19 @@
+<%= form_for @train, url: {action: "update", method: 'put'} do |f| %>
+  <%= f.label :train_line %>
+  <br/>
+  <%= f.text_field :train_line %>
+  <br/><br/>
+  <%= f.label :route_name %>
+  <br/>
+  <%= f.text_field :route_name %>
+  <br/><br/>
+  <%= f.label :run_number %>
+  <br/>
+  <%= f.text_field :run_number %>
+  <br/><br/>
+  <%= f.label :operator_id %>
+  <br/>
+  <%= f.text_field :operator_id %>
+  <br/><br/>
+  <%= f.submit "Update" %>
+<% end %>
