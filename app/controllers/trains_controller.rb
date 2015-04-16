@@ -25,7 +25,7 @@ class TrainsController < ApplicationController
     train.run_number = params['train']['run_number']
     train.operator_id = params['train']['operator_id']
     train.save
-    redirect_to root_path, notice: 'Train ' + params['train']['run_number'] + 'Updated'
+    redirect_to root_path, notice: 'Train ' + params['train']['run_number'] + ' Updated'
   end
   
   def edit
