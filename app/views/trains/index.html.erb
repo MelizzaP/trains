@@ -23,8 +23,12 @@
     <h4>There are currently no trains uploaded</h4>
 <% end %>
 
+<h3>Add Trains</h3>
+<%= link_to 'one train', new_train_path %>
+
 <%= form_tag import_trains_path, multipart: true do %>
-  <%= file_field_tag :file %>
+  <p><strong>A bunch of trains in csv format</strong></p>
+  <%= file_field_tag :file %><br/>
   <%= submit_tag 'Upload csv file' %>
 <% end %>
   
