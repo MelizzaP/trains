@@ -2,8 +2,19 @@ class TrainsController < ApplicationController
   def index
     @trains = Train.all
   end
+  
+  def new
+    @train = Train.new
+  end
 
   def create
+    train = Train.new(params['id'])
+    train.train_line = params['train']['train_line']
+    train.route_name = params['train']['route_name']
+    train.run_number = params['train']['run_number']
+    train.operator_id = params['train']['operator_id']
+    train.save
+    redirect_to root_path, notice: 'Train ' + params['train']['run_number'] + ' Created'
   end
 
   def update
@@ -13,7 +24,7 @@ class TrainsController < ApplicationController
     train.run_number = params['train']['run_number']
     train.operator_id = params['train']['operator_id']
     train.save
-    redirect_to root_path, notice: 'Train Updated'
+    redirect_to root_path, notice: 'Train ' + params['train']['run_number'] + 'Updated'
   end
   
   def edit
