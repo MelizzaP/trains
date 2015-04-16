@@ -1,7 +1,7 @@
 class TrainsController < ApplicationController
   def index
     @trains = Train.all.sort_by{ |t| t.run_number }
-    @trains = Kaminari.paginate_array(@trains).page(params[:page]).per(5)                                
+    @trains = Kaminari.paginate_array(@trains).page(params[:page]).per(5)                           
   end
   
   def new
