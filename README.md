@@ -17,12 +17,9 @@ There are many train lines in the city of Chicago. The El is the quickest, the M
 - Add pagination controls which show 5 valid data items per page
 - Set up CRUD (Create, Read, Update, Delete) functionality
 
-### Things To Consider
-
-
 ### Technologies Used
-  * Server-side: Ruby on Rails, PostgreSQL
-  * Testing: Rspec
+  * Ruby on Rails
+  * PostgreSQL
 
 ### Installation
 Run the following commands in your terminal
@@ -40,12 +37,20 @@ Run locally(localhost:3000)
 ```
   rails server
 ```
-  
-Run test suite
-```
-  bundle exec rspec
-```
----                                                       
-  
-## Thoughts for the future
-- 
+The app is also currently deployed on heroku at (https://guarded-waters-2050.herokuapp.com)
+it may take up to a minute if it hasn't been opened in a while
+
+## Dependencies
+  * byebug
+  * coffee-rails (~> 4.1.0)
+  * jbuilder (~> 2.0)
+  * jquery-rails
+  * kaminari
+  * pg
+  * rails (= 4.2.1)
+  * sass-rails (~> 5.0)
+  * sdoc (~> 0.4.0)
+  * spring
+  * turbolinks
+  * uglifier (>= 1.3.0)
+  * web-console (~> 2.0)
