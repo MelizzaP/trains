@@ -1,8 +1,24 @@
 <h1>Trains</h1>
 <% if @trains.length > 1 %>
+<table>
+  <tr>
+    <th>Train Line</th>
+    <th>Route Name</th>
+    <th>Run Number</th>
+    <th>Operator ID</th>
+  </tr>
+  
   <% @trains.each do |t| %>
-    <p> <%= t['run_number'] %> <p>
+    <tr>
+      <td> <%= t['train_line'] %> </td>
+      <td> <%= t['route_name'] %> </td>
+      <td> <%= t['run_number'] %> </td>
+      <td> <%= t['operator_id'] %> </td>
+      <td> <%= link_to 'edit', edit_train_path(t.id) %> </td>
+      <td> <%= link_to "delete", t, method: :delete %> </td>
+    </tr>
   <% end %>
+ </table>
 <% else %>
     <h4>There are currently no trains uploaded</h4>
 <% end %>
