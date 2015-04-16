@@ -7,7 +7,7 @@ class Train < ActiveRecord::Base
       row.to_hash.each do |key,value| 
         lowercase_hash.merge!({ key.downcase.strip => value })
       end
-      Train.create!(lowercase_hash)  
+      Train.create(lowercase_hash)  
     end
   end
 end
