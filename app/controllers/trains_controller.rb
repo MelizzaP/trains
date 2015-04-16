@@ -1,6 +1,6 @@
 class TrainsController < ApplicationController
   def index
-    @trains = Train.all
+    @trains = Train.all.sort_by{ |t| t.run_number }
   end
   
   def new
