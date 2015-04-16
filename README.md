@@ -37,7 +37,7 @@ Run locally(localhost:3000)
 ```
   rails server
 ```
-The app is also currently deployed on heroku at (https://guarded-waters-2050.herokuapp.com)
+The app is also currently deployed on heroku at (http://guarded-waters-2050.herokuapp.com/)
 it may take up to a minute if it hasn't been opened in a while
 
 ## Dependencies
@@ -54,3 +54,6 @@ it may take up to a minute if it hasn't been opened in a while
   * turbolinks
   * uglifier (>= 1.3.0)
   * web-console (~> 2.0)
+  
+## Thoughts for improvement
+- Unsure of why this is, but whenever a user adds an individual train, it doesn't sort itself with files enter through a csv file.
