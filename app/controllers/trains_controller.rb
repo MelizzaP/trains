@@ -8,8 +8,13 @@ class TrainsController < ApplicationController
 
   def update
   end
+  
+  def edit
+  end
 
   def destroy
+    Train.destroy(params['id'])
+    redirect_to root_path, notice: 'Train successfully deleted'
   end
   
   def import
