@@ -7,9 +7,17 @@ class TrainsController < ApplicationController
   end
 
   def update
+    train = Train.find(params['id'])
+    train.train_line = params['train']['train_line']
+    train.route_name = params['train']['route_name']
+    train.run_number = params['train']['run_number']
+    train.operator_id = params['train']['operator_id']
+    train.save
+    redirect_to root_path, notice: 'Train Updated'
   end
   
   def edit
+    @train = Train.find(params['id'])
   end
 
   def destroy
