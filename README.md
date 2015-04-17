@@ -54,6 +54,3 @@ it may take up to a minute if it hasn't been opened in a while
   * turbolinks
   * uglifier (>= 1.3.0)
   * web-console (~> 2.0)
-  
-## Thoughts for improvement
-- Unsure of why this is, but whenever a user adds an individual train, it doesn't sort itself with files enter through a csv file.
